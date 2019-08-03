@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Vuejs Study</title>
+<script src=" https://unpkg.com/vue"></script>
+<script>
+	window.onload = function(){
+		var vm1 = new Vue({
+			el:'#test1',
+			data : {
+				array1 : [10, 20, 30, 40, 50]
+			}
+		})
+	}
+</script>
+</head>
+<body>
+	<div id="test1">
+		<ul>
+			<li v-for='a1 in array1'>{{a1}}</li>
+		</ul>
+		<ul>
+			<li v-for='(a1, idx) in array1'>{{idx}} : {{a1}}</li>
+		</ul>
+	</div>
+</body>
+</html>
